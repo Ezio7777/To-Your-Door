@@ -38,7 +38,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.viewholder> {
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
 
         final MainModel model = list.get(position);
-        holder.foodimage.setImageResource(model.getImage());
+        holder.foodImage.setImageResource(model.getImage());
         holder.name.setText(model.getName());
         holder.price.setText(model.getPrice());
         holder.description.setText(model.getDescription());
@@ -52,15 +52,16 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.viewholder> {
 
     public class viewholder extends RecyclerView.ViewHolder {
 
-        ImageView foodimage;
+        ImageView foodImage;
+
         TextView name,price,description;
 
         public viewholder(@NonNull View itemView) {
             super(itemView);
 
-            foodimage = itemView.findViewById(R.id.imageView2);
+            foodImage = itemView.findViewById(R.id.imageView2);
             name = itemView.findViewById(R.id.name);
-            price = itemView.findViewById(R.id.price);
+            price = itemView.findViewById(id.orderprice);
             description = itemView.findViewById(R.id.description);
         }
     }

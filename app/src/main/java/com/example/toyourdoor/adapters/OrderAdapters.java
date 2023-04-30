@@ -37,10 +37,10 @@ public class OrderAdapters extends RecyclerView.Adapter<OrderAdapters.viewHolder
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
 
         final OrdersModel model = list.get(position);
-        holder.orderImage.setImageResource(model.getOrderImaage());
+        holder.orderImage.setImageResource(model.getOrderImage());
         holder.orderName.setText(model.getSoldItemName());
-        holder.orderNo.setText(model.getOrderNo());
-        holder.Price.setText(model.getPrice());
+        holder.orderNo.setText(model.getOrderNumber());
+        holder.orderPrice.setText(model.getPrice());
 
 
     }
@@ -53,7 +53,7 @@ public class OrderAdapters extends RecyclerView.Adapter<OrderAdapters.viewHolder
 
     public class viewHolder extends RecyclerView.ViewHolder {
         ImageView orderImage;
-        TextView orderName,orderNo,Price;
+        TextView orderName,orderNo,orderPrice;
 
 
         public viewHolder(@NonNull View itemView) {
@@ -61,7 +61,7 @@ public class OrderAdapters extends RecyclerView.Adapter<OrderAdapters.viewHolder
             orderImage = itemView.findViewById(R.id.orderimage);
             orderName = itemView.findViewById(R.id.orderitemname);
             orderNo = itemView.findViewById(R.id.orderNumber);
-            Price = itemView.findViewById(R.id.price);
+            orderPrice = itemView.findViewById(R.id.orderprice);
         }
     }
 }
