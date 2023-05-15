@@ -18,6 +18,7 @@ import com.example.toyourdoor.databinding.ActivityDetailBinding;
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //Food details.
         final int image = getIntent().getIntExtra("image",0);
         final int price = Integer.parseInt(getIntent().getStringExtra("price"));
         String name = getIntent().getStringExtra("name");
@@ -27,7 +28,8 @@ import com.example.toyourdoor.databinding.ActivityDetailBinding;
         binding.pricelable.setText(String.format("%d",price));
         binding.detailfoodname.setText(name);
         binding.detailDescription.setText(description);
-
+ 
+        //Adding DataBase.
         DBHelper helper = new DBHelper(this);
 
         binding.insertButton.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +44,7 @@ import com.example.toyourdoor.databinding.ActivityDetailBinding;
                         description,
                         Integer.parseInt(binding.qantity.getText().toString())
                 );
-
+             
                 if(isInserted){
                     Toast.makeText(DetailActivity.this, "Data Success", Toast.LENGTH_SHORT).show();
                 }
