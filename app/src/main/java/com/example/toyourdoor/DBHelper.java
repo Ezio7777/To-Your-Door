@@ -18,6 +18,8 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     @Override
+    
+    //DATABASE INSERT
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(
                 "create table oreders" +
@@ -29,6 +31,7 @@ public class DBHelper extends SQLiteOpenHelper {
                         "quantity integer," +
                         "description text," +
                         "foodname text)"
+            
         );
     }
 
