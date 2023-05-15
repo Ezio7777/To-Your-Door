@@ -14,29 +14,26 @@ import java.util.ArrayList;
 public class OrderActivity extends AppCompatActivity {
 
     ActivityOrderBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= ActivityOrderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        //Order Details.
         ArrayList<OrdersModel> list = new ArrayList<>();
-        list.add(new OrdersModel(R.drawable.burger,"Burger","150","150"));
-        list.add(new OrdersModel(R.drawable.burger,"Burger","150","150"));
-        list.add(new OrdersModel(R.drawable.burger,"Burger","150","150"));
-        list.add(new OrdersModel(R.drawable.burger,"Burger","150","150"));
-        list.add(new OrdersModel(R.drawable.burger,"Burger","150","150"));
-        list.add(new OrdersModel(R.drawable.burger,"Burger","150","150"));
-        list.add(new OrdersModel(R.drawable.burger,"Burger","150","150"));
+        list.add(new OrdersModel(R.drawable.burger," Burger "," 150 "," 150 "));
+        list.add(new OrdersModel(R.drawable.burger," Burger "," 150 "," 150 "));
+        list.add(new OrdersModel(R.drawable.burger," Burger "," 150 "," 150 "));
+        list.add(new OrdersModel(R.drawable.burger," Burger "," 150 "," 150 "));
+        list.add(new OrdersModel(R.drawable.burger," Burger "," 150 "," 150 "));
+        list.add(new OrdersModel(R.drawable.burger," Burger "," 150 "," 150 "));
+        list.add(new OrdersModel(R.drawable.burger," Burger "," 150 "," 150 "));
 
         OrderAdapters adapters= new OrderAdapters(list,this);
         binding.orderRecycleView.setAdapter(adapters);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.orderRecycleView.setLayoutManager(layoutManager);
-
-
-
 
     }
 }
