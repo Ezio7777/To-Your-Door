@@ -7,6 +7,4 @@ Then on second comes finalizing the order in which you will get the total price 
 Once order is finalized your order will be placed.
 
 Contributors are:
-1- Ezio7777
-2- Codeshubh04
-3- Palak2525
+Ezio7777 , Codeshubh04 , Palak2525
